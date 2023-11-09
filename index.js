@@ -9,7 +9,7 @@ btnSalvar.addEventListener("click", function(event) {
     var email = formularioDeCaptura.email.value;
     var whatsapp = formularioDeCaptura.whatsapp.value;
 
-    console.console.log("Primeiro Nome: "+primeiroNome);
-    console.console.log("Email: "+email);
-    console.console.log("Whats app: "+whatsapp);
+    console.log("Primeiro Nome: "+primeiroNome);
+    console.log("Email: "+email);
+    console.log("Whats app: "+whatsapp);
 });
