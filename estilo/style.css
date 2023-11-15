@@ -64,6 +64,16 @@ footer{
     color: white;
 }
 
-input[type=submit] {
-    width: 20em;  height: 2em;
+
+input {
+    display: block;
+    background-color: #ccc;
+    height: 35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 100px;
+    text-align: right;
+    border-radius: 15px;
+    
 }
