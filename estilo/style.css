@@ -47,6 +47,8 @@ nav{
 }
 
 main{
+    min-width: 300px;
+    max-width: 1000px;
     background-color: white;
 }
 
