@@ -50,7 +50,12 @@ main{
     min-width: 300px;
     max-width: 1000px;
     margin: auto;
+    margin-bottom: 30px;
     background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.433);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 main h1 {
@@ -67,8 +72,8 @@ main img {
 }
 
 main img.pequena {
-    width: 10%;
-    display: block;
+    width: 30%;
+    display: inline;
     margin: auto;
 }
 
