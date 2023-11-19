@@ -66,6 +66,12 @@ main img {
     width: 100%;
 }
 
+main img.pequena {
+    width: 10%;
+    display: block;
+    margin: auto;
+}
+
 footer{
     background-color: var(--cor5);
     color: white;
@@ -74,7 +80,7 @@ footer{
 
 input {
     display: block;
-    background-color: #ccc;
+    background-color: var(--cor0);
     height: 35px;
     border: none;
     outline: 0;
