@@ -29,9 +29,9 @@ body {
     font-family: var(--fonte-padrao);
 }
 
+
 header {
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
-    
     min-height: 150px;
     text-align: center;
     padding-top: 40px;
@@ -75,7 +75,7 @@ nav > a:hover  {
     background-color: var(--cor3);
     color: var(--cor5);
 }
-main{
+main {
     min-width: 300px;
     max-width: 1000px;
     margin: auto;
@@ -96,15 +96,23 @@ main h2 {
     font-family: var(--font-android);
 }
 
+main p {
+    margin: 15px, 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1.1em;
+    line-height: 2em;
+}
+
 main img {
     width: 100%;
 }
 
 main img.pequena {
-    width: 30%;
+    max-width: 350px;
     display: inline;
     margin: auto;
-}
+}   
 
 footer{
     background-color: var(--cor5);
@@ -113,6 +121,7 @@ footer{
 
 
 input {
+    font-size: 1.1em;
     display: block;
     background-color: var(--cor0);
     height: 35px;
