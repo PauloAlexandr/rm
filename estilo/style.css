@@ -15,8 +15,8 @@
     --cor5: #063d1e;
 
     --fonte-padrao: Arial, Verdana, Helvetica, Sans-serif;
-    --fonte-destaque:'Bebas Neue', cursive; 
-    --font-android: 'Android', cursive;
+    --fonte-destaque:'Bebas Neue', 'cursive'; 
+    --font-android: 'Android', 'cursive';
 }
 
 * {
@@ -92,20 +92,41 @@ main h1 {
     font-family: var(--font-android);
 }
 main h2 {
-    color:var(--cor5) ;
     font-family: var(--font-android);
+    color:var(--cor5);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
 }
 
 main p {
     margin: 15px, 0px;
     text-align: justify;
     text-indent: 30px;
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 2em;
 }
 
 main img {
     width: 100%;
+}
+
+main strong {
+    color: var (--cor4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color:var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
 }
 
 main img.pequena {
