@@ -29,6 +29,10 @@ body {
     font-family: var(--fonte-padrao);
 }
 
+a.externo::after{
+    content: "\00A0\1F517";
+}
+
 
 header {
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
@@ -139,6 +143,15 @@ aside {
     background-color: var(--cor1);
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.315);
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+    
 }
 
 aside > ul {
@@ -148,13 +161,6 @@ aside > ul {
 
 }
 
-aside > h3 {
-    background-color: var(--cor4);
-    color: white;
-    padding: 5px;
-    margin: 10px 10px 0px 10px;
-    border-radius: 10px 10px 0px 0px;
-}
 
 footer{
     background-color: var(--cor5);
@@ -173,7 +179,6 @@ footer a > {
 footer a:hover {
     text-decoration: underline;
     color:var(--cor1);
-
 }
 
 
