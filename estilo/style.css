@@ -169,7 +169,7 @@ aside > ul {
 }
 
 
-footer{
+footer {
     background-color: var(--cor5);
     color: white;
     text-align: center;
@@ -177,7 +177,7 @@ footer{
     padding: 5px;
 }
 
-footer a > {
+footer a {
     color: white;
     font-weight: border;
     text-decoration: none;
