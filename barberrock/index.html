@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbeiro Rocha</title>
+    <link rel="shortcut icon" href= imagens/favicon.png e="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <aside>
+        <p>
+            <a href="https://maps.app.goo.gl/9XGZg7j4SCPcmKYo8" target="_blank"class="externo">Endereço: <br>
+            Rua Odilon Braga da Silva 192, <br>
+            Vila Nhocuné.</a>
+        </p>
+    </aside>
+    <header>
+        <h1>Barbeiro Rocha</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Bem-vindo à Barber Rock, onde tradição e estilo se encontram. Oferecemos cortes de cabelo, barbas e muito mais.</p>
+    </section>
+
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <ul>
+            <li>Corte de cabelo</li>
+            <li>Barba</li>
+            <li>Tratamentos capilares</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form action="processa_formulario.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Barbeiro Rocha</p>
+    </footer>
+    
+</body>
+</html>

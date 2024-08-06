@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Horário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .schedule-table th {
+            background-color: #f4f4f4;
+        }
+        .available {
+            background-color: #d4edda;
+            cursor: pointer;
+        }
+        .unavailable {
+            background-color: #f8d7da;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Agendamento de Horário</h1>
+        <form id="agendamentoForm" action="/agendar" method="post">
+            <table class="schedule-table" id="scheduleTable">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Horários serão inseridos aqui via JavaScript -->
+                </tbody>
+            </table>
+            <button type="submit">Confirmar Agendamento</button>
+        </form>
+    </div>
+
+    <script>
+        // Função para carregar horários
+        async function loadHorarios() {
+            try {
+                const response = await fetch('/horarios');
+                const horarios = await response.json();
+                const tbody = document.querySelector('#scheduleTable tbody');
+                tbody.innerHTML = '';
+
+                horarios.forEach(row => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${row.horario}</td>
+                        <td class="${row.status === 'Disponível' ? 'available' : 'unavailable'}">
+                            ${row.status === 'Disponível' ? <input type="radio" name="horario" value="${row.horario}"> Disponível : 'Já Agendado'}
+                        </td>
+                    '';
+                    tbody.appendChild(tr);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar horários:', error);
+            }
+        }
+
+        // Carregar horários quando a página for carregada
+        document.addEventListener('DOMContentLoaded', loadHorarios);
+    </script>
+</body>
+</html>

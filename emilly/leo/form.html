@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Horário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .schedule-table th {
+            background-color: #f4f4f4;
+        }
+        .available {
+            background-color: #d4edda;
+            cursor: pointer;
+        }
+        .unavailable {
+            background-color: #f8d7da;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Agendamento de Horário</h1>
+        <form action="/submit-agendamento" method="post">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:00 - 09:00</td>
+                        <td class="unavailable">Já Agendado</td>
+                    </tr>
+                    <tr>
+                        <td>09:00 - 10:00</td>
+                        <td class="available">
+                            <input type="radio" name="horario" value="09:00 - 10:00"> Disponível
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td class="available">
+                            <input type="radio" name="horario" value="10:00 - 11:00"> Disponível
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 12:00</td>
+                        <td class="unavailable">Já Agendado</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 14:00</td>
+                        <td class="available">
+                            <input type="radio" name="horario" value="13:00 - 14:00"> Disponível
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit">Confirmar Agendamento</button>
+        </form>
+    </div>
+</body>
+</html>

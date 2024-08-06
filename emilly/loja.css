@@ -1,0 +1,23 @@
+.scrollToTop { bottom: 1rem; }
+:before { width:30%; }
+
+/* espaçamento banner tarja */ 
+    .span12.banner.tarja {
+        margin-bottom: 10px;
+        
+    }
+/* desaparecer menu no mobile */ 
+@media(max-width: 787px){
+    .meuinsta {
+      display: none;
+    }
+}
+
+/* mini banner mobile */
+@media screen and (max-width:767px) {
+    .row-fluid-banner.mini-banner .modulo.span4 {
+        width: 32%;
+        display: inline-block;
+        margin: auto;
+    }
+}
